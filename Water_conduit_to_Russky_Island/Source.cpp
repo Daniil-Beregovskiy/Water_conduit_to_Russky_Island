@@ -25,61 +25,7 @@ vector <vector <couple>> dist;
 vector <int> left_right(4);
 vector <int> down_up(4);
 
-void conclusion_a() {
-	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-	// Вывод для отладки
-	for (int i = 1; i < N + 1; i++)
-	{
-		for (int j = 1; j < M + 1; j++)
-		{
-			if (dist[i][j].a != alotof) {
-				if (dist[i][j].a >= 0 && dist[i][j].a < 10)
-					cout << " ";
-
-				SetConsoleTextAttribute(console, FOREGROUND_GREEN);
-				if (dist[i][j].a == -1)
-					SetConsoleTextAttribute(console, FOREGROUND_RED);
-
-				cout << dist[i][j].a << " ";
-			}
-			else {
-				SetConsoleTextAttribute(console, FOREGROUND_INTENSITY);
-				cout << " f ";
-			}
-		}
-		cout << endl;
-	}
-	cout << endl;
-}
-void conclusion_b() {
-	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-	// Вывод для отладки
-	for (int i = 1; i < N + 1; i++)
-	{
-		for (int j = 1; j < M + 1; j++)
-		{
-			if (dist[i][j].b != alotof) {
-				if (dist[i][j].b >= 0 && dist[i][j].b < 10)
-					cout << " ";
-
-				SetConsoleTextAttribute(console, FOREGROUND_BLUE);
-				if (dist[i][j].b == -1)
-					SetConsoleTextAttribute(console, FOREGROUND_RED);
-
-				cout << dist[i][j].b << " ";
-			}
-			else {
-				SetConsoleTextAttribute(console, FOREGROUND_INTENSITY);
-				cout << " f ";
-			}
-		}
-		cout << endl;
-	}
-	cout << endl;
-}
-
 void dfs_a(S v) {
-		conclusion_a();
 	S time;
 	if (!key_stop_a) {
 		time.x = v.x;
@@ -106,7 +52,6 @@ void dfs_a(S v) {
 }
 
 void dfs_b(S v) {
-		conclusion_b();
 	S time;
 	if (!key_stop_b || v.y == M) {
 		time.x = v.x;
