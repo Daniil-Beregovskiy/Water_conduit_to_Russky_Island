@@ -218,9 +218,6 @@ int main() {
 		}
 	}
 
-	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(console, WHITE_PEN);
-
 	cout << key_a.size() - 1 << endl;
 	for (int i = 0; i < key_a.size(); i++)
 	{
