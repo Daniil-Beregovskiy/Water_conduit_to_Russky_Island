@@ -18,9 +18,7 @@ int N, M, x2, y2;
 vector <S> key_a;
 vector <S> key_b;
 bool key_stop_a = false, key_stop_b = false, i_onebegin = false;
-//vector <bool> used;
 vector <vector <couple>> dist;
-//vector <vector <char>> use;
 
 vector <int> left_right(4);
 vector <int> down_up(4);
