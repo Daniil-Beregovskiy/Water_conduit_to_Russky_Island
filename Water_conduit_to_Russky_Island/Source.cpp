@@ -77,7 +77,7 @@ void conclusion_b() {
 }
 
 void dfs_a(S v) {
-	//conclusion_a()
+	conclusion_a();
 	S time;
 	if (!key_stop_a) {
 		time.x = v.x;
@@ -104,7 +104,7 @@ void dfs_a(S v) {
 }
 
 void dfs_b(S v) {
-	//conclusion_b()
+	conclusion_b();
 	S time;
 	if (!key_stop_b || v.y == M) {
 		time.x = v.x;
